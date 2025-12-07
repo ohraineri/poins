@@ -1,10 +1,11 @@
 package com.poins.api;
 
-/**
- * Hello world!
- */
+import com.poins.api.http.Server;
+import java.net.InetSocketAddress;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Server server = new Server();
+        server.server(new InetSocketAddress(8080));
     }
 }
