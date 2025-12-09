@@ -8,5 +8,5 @@ import java.lang.annotation.RetentionPolicy;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Delete {
-    String value();
+    public String value();
 }
