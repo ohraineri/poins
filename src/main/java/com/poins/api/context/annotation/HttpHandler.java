@@ -1,10 +1,10 @@
 package com.poins.api.context.annotation;
 
-import java.lang.reflect.Method;
 import java.util.Map;
-
+import java.lang.reflect.Method;
 import com.poins.api.http.Server;
 import com.poins.api.http.annotations.Get;
+
 public class HttpHandler {
     private Map<String, Method[]> controllers;
 

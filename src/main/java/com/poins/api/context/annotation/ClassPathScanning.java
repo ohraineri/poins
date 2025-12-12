@@ -1,12 +1,11 @@
 package com.poins.api.context.annotation;
 
-import java.lang.reflect.Method;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.HashMap;
+import java.lang.reflect.Method;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
-
 import com.poins.api.http.annotations.Controller;
 public class ClassPathScanning {
     static public final Reflections reflections = new Reflections("com.poins.api",
