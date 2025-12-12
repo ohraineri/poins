@@ -24,8 +24,8 @@ public class ClassPathScanning {
         Map<String, Method[]> controllers = new HashMap<String, Method[]>(); 
         Set<Class<?>> classControllers = ClassPathScanning.getAllControllerClasses();
         for(Class<?> controller : classControllers) {         
-                Method[] controllerMethods = controller.getDeclaredMethods();
-                controllers.put(controller.getName(), controllerMethods);
+            Method[] controllerMethods = controller.getDeclaredMethods();
+            controllers.put(controller.getName(), controllerMethods);
         }
         return controllers;
     }
