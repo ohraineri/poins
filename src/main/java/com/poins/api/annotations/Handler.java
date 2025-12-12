@@ -1,11 +1,11 @@
-package com.poins.api.context.annotation;
+package com.poins.api.annotations;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpExchange;
-import com.poins.api.context.annotation.validations.HttpHandlerRules;
-import com.poins.api.context.annotation.validations.ValidationResult;
+import com.poins.api.validation.HttpHandlerRules;
+import com.poins.api.validation.ValidationResult;
 
 public class Handler implements HttpHandler {
     

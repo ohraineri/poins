@@ -1,4 +1,4 @@
-package com.poins.api.context.annotation;
+package com.poins.api.annotations;
 
 import java.util.Map;
 import java.lang.reflect.Method;

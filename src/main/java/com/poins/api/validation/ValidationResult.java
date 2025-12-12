@@ -1,4 +1,4 @@
-package com.poins.api.context.annotation.validations;
+package com.poins.api.validation;
 
 public class ValidationResult {
     public final int statusCode; 

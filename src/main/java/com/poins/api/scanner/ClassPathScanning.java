@@ -1,4 +1,4 @@
-package com.poins.api.context.annotation;
+package com.poins.api.scanner;
 
 import java.util.Map;
 import java.util.Set;

@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
 import com.sun.net.httpserver.HttpServer;
-import com.poins.api.context.annotation.HttpHandler;
-import com.poins.api.context.annotation.ClassPathScanning;
+import com.poins.api.annotations.HttpHandler;
+import com.poins.api.scanner.ClassPathScanning;
 
 public class Server {
     public static HttpServer server;
@@ -14,12 +14,13 @@ public class Server {
     public void bind(InetSocketAddress port) {
         try {
             Map<String, Method[]> controllers = ClassPathScanning.collectControllers();
-            HttpServer server = HttpServer.create(port, 0);
+            HttpServer serverInstance = HttpServer.create(port, 0);
+            Server.server = serverInstance;
             HttpHandler handler = new HttpHandler(controllers);
             handler.registerRoutesFromMethods();
-            server.start();
+            serverInstance.start();
         } catch(IOException e) {
             throw new Error(e);
         }
-    }    
+    }
 }
