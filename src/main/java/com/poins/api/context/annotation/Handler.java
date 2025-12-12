@@ -1,6 +1,5 @@
 package com.poins.api.context.annotation;
 
-import java.net.URI;
 import java.io.IOException;
 import java.io.OutputStream;
 import com.sun.net.httpserver.HttpHandler;
