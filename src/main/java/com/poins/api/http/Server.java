@@ -13,6 +13,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class Server {
+    public static HttpServer server;
+
     public void bind(InetSocketAddress port) {
         try {
             Map<String, Method[]> controllers = ClassPathScanning.collectControllers();
@@ -23,5 +25,5 @@ public class Server {
         } catch(IOException e) {
             throw new Error(e);
         }
-    }
+    }    
 }
