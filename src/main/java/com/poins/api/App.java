@@ -6,6 +6,6 @@ import java.net.InetSocketAddress;
 public class App {
     public static void main(String[] args) {
         Server server = new Server();
-        server.server(new InetSocketAddress(8080));
+        server.bind(new InetSocketAddress(8080));
     }
 }
