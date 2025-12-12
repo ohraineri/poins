@@ -1,9 +1,9 @@
 package com.poins.api.context.annotation.validations;
 
 public class ValidationResult {
-    int statusCode; 
-    String responseMessage; 
-    boolean validRequest;
+    public int statusCode; 
+    public String responseMessage; 
+    public boolean validRequest;
 
     public ValidationResult(int statusCode, String responseMessage, boolean validRequest) {
         this.statusCode = statusCode;
