@@ -24,5 +24,4 @@ public class Handler implements HttpHandler {
         os.write(response.getBytes());
         os.close();
     }
-
 }

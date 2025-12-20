@@ -14,4 +14,9 @@ public class HttpHandlerRules {
     public static boolean isSameRoute(HttpExchange exchange) {
         return exchange.getRequestURI().toString().equals(exchange.getHttpContext().getPath());
     }
+
+    public static boolean isMethodAllowed(HttpExchange exchange) {
+        exchange.getRequestURI().toString();
+        return true;
+    }
 }
