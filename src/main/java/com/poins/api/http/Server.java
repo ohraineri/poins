@@ -13,7 +13,8 @@ public class Server {
 
     public void bind(InetSocketAddress port) {
         try {
-            Map<String, Method[]> controllers = ClassPathScanning.collectControllers();
+            Map<Class<?>, Method[]> controllers = ClassPathScanning.collectControllers();
+            ClassPathScanning.registerRoutes("/");
             HttpServer serverInstance = HttpServer.create(port, 0);
             Server.server = serverInstance;
             HttpHandler handler = new HttpHandler(controllers);
