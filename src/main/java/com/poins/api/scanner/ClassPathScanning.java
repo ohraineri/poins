@@ -14,12 +14,14 @@ import com.poins.api.http.Route;
 import com.poins.api.http.annotations.Controller;
 import com.poins.api.http.annotations.HttpRoute;
 public class ClassPathScanning {
-    static public final Reflections reflections = new Reflections("com.poins.api",
+    static private final Reflections reflections = new Reflections("com.poins.api",
     Scanners.MethodsReturn,
     Scanners.TypesAnnotated,
     Scanners.MethodsAnnotated,
     Scanners.MethodsParameter
     );
+    
+    
 
     public static Set<Class<?>> getAllControllerClasses() {
         return ClassPathScanning.reflections.getTypesAnnotatedWith(Controller.class);
@@ -35,7 +37,7 @@ public class ClassPathScanning {
         return controllers;
     }
 
-    public static Map<String, Route> registerRoutes() throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException {
+    public static Map<String, Route> collectRoutes() throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException {
         Set<Class<?>> controllers = ClassPathScanning.getAllControllerClasses();
         Map<String, Route> routerList = new HashMap<String, Route>();
 
