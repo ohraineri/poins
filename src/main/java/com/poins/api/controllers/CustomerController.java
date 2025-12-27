@@ -18,12 +18,12 @@ public class CustomerController {
         // Get Route
     }
 
-    @Post("/update")
+    @Post("/")
     public void store() {
         // Post Route
     }
 
-    @Put("/")
+    @Put("/update")
     public void update() {
         // Update Route
     }
