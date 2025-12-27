@@ -1,11 +1,14 @@
 package com.poins.api.http.annotations;
 
 import java.lang.annotation.Target;
+
+import com.poins.api.http.enums.HttpMethod;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.RetentionPolicy;
 
-@HttpRoute(method = "DELETE")
+@HttpRoute(method = HttpMethod.DELETE)
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Delete {

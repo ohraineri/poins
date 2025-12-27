@@ -5,9 +5,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import com.poins.api.http.enums.HttpMethod;
+
 @Target(ElementType.ANNOTATION_TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 
 public @interface HttpRoute {
-    String method();
+	HttpMethod method();
 }
