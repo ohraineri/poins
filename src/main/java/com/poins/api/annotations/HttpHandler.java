@@ -1,22 +1,20 @@
 package com.poins.api.annotations;
 
 import java.util.Map;
-import java.lang.reflect.Method;
+
+
+import com.poins.api.http.Route;
+import com.poins.api.http.Router;
 import com.poins.api.http.Server;
-import com.poins.api.http.annotations.Get;
 
 public class HttpHandler {
-    private Map<Class<?>, Method[]> controllers;
 
-    public HttpHandler(Map<Class<?>, Method[]> controller) {
-        this.controllers = controller;
+    public HttpHandler() {
     } 
 
     public void registerRoutesFromMethods() {
-        for(Map.Entry<Class<?>, Method[]> controller : this.controllers.entrySet()) {
-            for(int i = 0; i < controller.getValue().length; i++) {
-                Server.server.createContext(controller.getValue()[i].getAnnotation(Get.class).value(), new Handler());
-            }
+        for(Map.Entry<String, Route> route : Router.getInstance().entrySet()) { 
+        	Server.server.createContext(route.getKey(), new Handler());
         }
     }
 }
