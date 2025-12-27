@@ -23,7 +23,7 @@ public class CustomerController {
         // Post Route
     }
 
-    @Put("/update")
+    @Put("/")
     public void update() {
         // Update Route
     }
