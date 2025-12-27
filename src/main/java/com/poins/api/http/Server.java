@@ -13,14 +13,13 @@ public class Server {
 
     public void bind(InetSocketAddress port) {
         try {
-            Map<Class<?>, Method[]> controllers = ClassPathScanning.collectControllers();
-            ClassPathScanning.registerRoutes("/");
+        	Router.registerRoutes(ClassPathScanning.collectRoutes());
             HttpServer serverInstance = HttpServer.create(port, 0);
             Server.server = serverInstance;
-            HttpHandler handler = new HttpHandler(controllers);
+            HttpHandler handler = new HttpHandler();
             handler.registerRoutesFromMethods();
             serverInstance.start();
-        } catch(IOException e) {
+        } catch(Exception e) {
             throw new Error(e);
         }
     }
