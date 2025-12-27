@@ -6,7 +6,7 @@ import com.poins.api.http.annotations.Post;
 import com.poins.api.http.annotations.Delete;
 import com.poins.api.http.annotations.Controller;
 
-@Controller("/customer")
+@Controller("/customers")
 public class CustomerController {
     @Get("/test")
     public void index() {
@@ -18,7 +18,7 @@ public class CustomerController {
         // Get Route
     }
 
-    @Post("/")
+    @Post("/update")
     public void store() {
         // Post Route
     }
