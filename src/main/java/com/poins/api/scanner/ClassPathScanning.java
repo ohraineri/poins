@@ -2,6 +2,7 @@ package com.poins.api.scanner;
 
 import java.util.Map;
 import java.util.Set;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
@@ -51,7 +52,11 @@ public class ClassPathScanning {
                     Object value = valueMethod.invoke(annotation);
 
                     HttpRoute httpRoute = annotationType.getAnnotation(HttpRoute.class);
-                    routerList.put(value.toString(), new Route(httpRoute.method(), method, controller, value.toString()));
+                    if(routerList.containsKey(value.toString())) {
+                    	routerList.get(value.toString()).addAllowedMethod(httpRoute.method());
+                    	continue;
+                    }
+                    routerList.put(value.toString(), new Route(EnumSet.of(httpRoute.method()), method, controller, value.toString()));
                 }
             }
         }
