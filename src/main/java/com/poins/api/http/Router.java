@@ -2,6 +2,9 @@ package com.poins.api.http;
 
 
 import java.util.Map;
+
+import com.poins.api.http.enums.HttpMethod;
+
 import java.util.HashMap;
 
 public class Router {
@@ -14,5 +17,9 @@ public class Router {
 	static public Map<String, Route> registerRoutes(Map<String, Route> routes) {
 		Router.registeredRoutes = routes;
 		return Router.registeredRoutes;
+	}
+	
+	static public boolean routeAllowsMethod(String route) {
+		return Router.getInstance().get(route).allowsMethod(HttpMethod.valueOf(route));
 	}
 }

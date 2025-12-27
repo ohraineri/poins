@@ -1,5 +1,7 @@
 package com.poins.api.validation;
 
+import com.poins.api.http.Router;
+import com.poins.api.http.enums.HttpMethod;
 import com.sun.net.httpserver.HttpExchange;
 
 public class HttpHandlerRules {
@@ -8,6 +10,8 @@ public class HttpHandlerRules {
     public static ValidationResult validate(HttpExchange exchange) {
         if(!isSameRoute(exchange))
             return ValidationResult.error(404, "Not Found");
+        if(!isMethodAllowed(exchange))
+            return ValidationResult.error(405, "Method Not Allowed");       	
         return ValidationResult.ok();
     }
 
@@ -16,7 +20,6 @@ public class HttpHandlerRules {
     }
 
     public static boolean isMethodAllowed(HttpExchange exchange) {
-        exchange.getRequestURI().toString();
-        return true;
+    	return Router.getInstance().get(exchange.getRequestURI().toString()).allowsMethod(HttpMethod.valueOf(exchange.getRequestMethod()));
     }
 }
