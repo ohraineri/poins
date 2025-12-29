@@ -1,5 +1,6 @@
 package com.poins.api.controllers;
 
+import com.poins.api.entities.Employee;
 import framework.http.annotations.Controller;
 import framework.http.annotations.methods.Get;
 import framework.http.annotations.methods.Put;
@@ -20,7 +21,7 @@ public class EmployeeController {
     }
 
     @Post("/")
-    public void store(@RequestBody Customer customer) {
+    public void store(@RequestBody Employee customer) {
         // Post Route
     }
 
