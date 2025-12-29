@@ -1,9 +1,9 @@
-package com.poins.api.http;
+package framework.http;
 
 
 import java.util.Map;
 
-import com.poins.api.http.enums.HttpMethod;
+import framework.http.enums.HttpMethod;
 
 import java.util.HashMap;
 

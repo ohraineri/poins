@@ -1,4 +1,4 @@
-package com.poins.api.http.enums;
+package framework.http.enums;
 
 public enum HttpMethod {
 	GET,

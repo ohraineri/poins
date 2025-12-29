@@ -1,4 +1,4 @@
-package com.poins.api.annotations;
+package framework.http.handlers;
 
 import java.util.Map;
 

@@ -1,10 +1,10 @@
-package com.poins.api.http.annotations.parameters;
+package framework.http.annotations.parameters;
 
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.RetentionPolicy;
 
-@Target(ElementType.METHOD)
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface RequestBody {}

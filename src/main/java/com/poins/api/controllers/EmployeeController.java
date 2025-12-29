@@ -1,6 +1,5 @@
 package com.poins.api.controllers;
 
-import com.poins.api.entities.Customer;
 import framework.http.annotations.Controller;
 import framework.http.annotations.methods.Get;
 import framework.http.annotations.methods.Put;
@@ -9,7 +8,7 @@ import framework.http.annotations.methods.Delete;
 import framework.http.annotations.parameters.RequestBody;
 
 @Controller("/customers")
-public class CustomerController {
+public class EmployeeController {
     @Get("/test")
     public void index() {
         // Get Route

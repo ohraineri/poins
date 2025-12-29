@@ -1,4 +1,4 @@
-package com.poins.api.validation;
+package framework.http.validation;
 
 public class ValidationResult {
     public final int statusCode; 

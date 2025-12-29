@@ -1,9 +1,9 @@
-package com.poins.api.http.annotations.methods;
+package framework.http.annotations.methods;
 
 import java.lang.annotation.Target;
 
-import com.poins.api.http.annotations.HttpRoute;
-import com.poins.api.http.enums.HttpMethod;
+import framework.http.annotations.HttpRoute;
+import framework.http.enums.HttpMethod;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.ElementType;

@@ -1,8 +1,8 @@
-package com.poins.api.http;
+package framework.http;
 
 import java.util.Set;
 
-import com.poins.api.http.enums.HttpMethod;
+import framework.http.enums.HttpMethod;
 
 import java.lang.reflect.Method;
 

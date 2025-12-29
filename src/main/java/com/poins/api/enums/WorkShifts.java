@@ -1,6 +1,6 @@
 package com.poins.api.enums;
 
-public enum WorkShiftsEnum {
+public enum WorkShifts {
     DAY_SHIFT,
     NIGHT_SHIFT,
     MORNING_SHIFT,

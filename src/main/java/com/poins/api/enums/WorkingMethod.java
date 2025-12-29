@@ -1,6 +1,6 @@
 package com.poins.api.enums;
 
-public enum WorkingMethodEnum {
+public enum WorkingMethod {
     ON_SITE,
     REMOTE,
     HYBRID,

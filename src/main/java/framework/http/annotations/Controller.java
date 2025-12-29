@@ -1,4 +1,4 @@
-package com.poins.api.http.annotations;
+package framework.http.annotations;
 
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;

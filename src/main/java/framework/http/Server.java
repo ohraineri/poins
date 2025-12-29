@@ -1,12 +1,9 @@
-package com.poins.api.http;
+package framework.http;
 
-import java.util.Map;
-import java.io.IOException;
-import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
 import com.sun.net.httpserver.HttpServer;
-import com.poins.api.annotations.HttpHandler;
-import com.poins.api.scanner.ClassPathScanning;
+import framework.http.handlers.HttpHandler;
+import framework.http.scanner.ClassPathScanning;
 
 public class Server {
     public static HttpServer server;

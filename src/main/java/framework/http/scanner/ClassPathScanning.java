@@ -1,4 +1,4 @@
-package com.poins.api.scanner;
+package framework.http.scanner;
 
 import java.util.Map;
 import java.util.Set;
@@ -11,9 +11,9 @@ import java.lang.reflect.Method;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 
-import com.poins.api.http.Route;
-import com.poins.api.http.annotations.Controller;
-import com.poins.api.http.annotations.HttpRoute;
+import framework.http.Route;
+import framework.http.annotations.Controller;
+import framework.http.annotations.HttpRoute;
 public class ClassPathScanning {
     static private final Reflections reflections = new Reflections("com.poins.api",
     Scanners.MethodsReturn,

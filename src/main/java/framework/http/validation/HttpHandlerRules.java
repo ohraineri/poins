@@ -1,7 +1,7 @@
-package com.poins.api.validation;
+package framework.http.validation;
 
-import com.poins.api.http.Router;
-import com.poins.api.http.enums.HttpMethod;
+import framework.http.Router;
+import framework.http.enums.HttpMethod;
 import com.sun.net.httpserver.HttpExchange;
 
 public class HttpHandlerRules {

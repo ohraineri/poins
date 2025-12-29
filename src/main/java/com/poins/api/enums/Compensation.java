@@ -1,6 +1,6 @@
 package com.poins.api.enums;
 
-public enum CompensationEnum {
+public enum Compensation {
     HOURLY,
     SALARIED,
     COMMISSION_BASED,
