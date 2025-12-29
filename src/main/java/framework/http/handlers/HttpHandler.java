@@ -3,9 +3,9 @@ package com.poins.api.annotations;
 import java.util.Map;
 
 
-import com.poins.api.http.Route;
-import com.poins.api.http.Router;
-import com.poins.api.http.Server;
+import framework.http.Route;
+import framework.http.Router;
+import framework.http.Server;
 
 public class HttpHandler {
 
