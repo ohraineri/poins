@@ -2,7 +2,7 @@ package com.poins.api.entities;
 
 import lombok.Value;
 import lombok.Builder;
-import java.util.Date;
+import java.text.DateFormat;
 import com.poins.api.enums.Journey;
 
 
@@ -11,6 +11,6 @@ import com.poins.api.enums.Journey;
 public class Employee {
     String firstName;
     String lastName;
-    Date dateBirth;
+    DateFormat dateBirth;
     Journey journey;
 }
