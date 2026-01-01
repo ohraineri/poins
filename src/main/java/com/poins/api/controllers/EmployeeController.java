@@ -8,7 +8,7 @@ import framework.http.annotations.methods.Post;
 import framework.http.annotations.methods.Delete;
 import framework.http.annotations.parameters.RequestBody;
 
-@Controller("/customers")
+@Controller("/employee")
 public class EmployeeController {
     @Get("/test")
     public void index() {
@@ -21,13 +21,12 @@ public class EmployeeController {
     }
 
     @Post("/")
-    public void store(@RequestBody Employee customer) {
+    public void store(@RequestBody Employee employee) {
         // Post Route
     }
 
     @Put("/")
-    public void update() {
-        System.out.println("UPDATE - Route");
+    public void update(@RequestBody Employee employee) {
         // Update Route
     }
     
