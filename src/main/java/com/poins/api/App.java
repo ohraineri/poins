@@ -1,6 +1,6 @@
 package com.poins.api;
 
-import com.poins.api.http.Server;
+import framework.http.Server;
 import java.net.InetSocketAddress;
 
 public class App {
